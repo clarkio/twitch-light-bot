@@ -10,7 +10,7 @@ const restify = require('restify');
 // Import required bot services. See https://aka.ms/bot-services to learn more about the different parts of a bot.
 const { BotFrameworkAdapter } = require('botbuilder');
 
-const { DialogBot } = require('./bots/dialogBot');
+const { MainBot } = require('./bots/mainBot');
 
 // Note: Ensure you have a .env file and include LuisAppId, LuisAPIKey and LuisAPIHostName.
 const ENV_FILE = path.join(__dirname, '.env');
@@ -36,7 +36,7 @@ adapter.onTurnError = async (context, error) => {
 };
 
 // Create the bot
-const bot = new DialogBot();
+const bot = new MainBot();
 
 // Create HTTP server
 let server = restify.createServer();

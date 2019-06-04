@@ -5,7 +5,7 @@ const { ActivityHandler } = require('botbuilder');
 
 const { LuisHelper } = require('./luisHelper');
 
-class DialogBot extends ActivityHandler {
+class MainBot extends ActivityHandler {
     constructor() {
         super();
 
@@ -18,4 +18,4 @@ class DialogBot extends ActivityHandler {
     }
 }
 
-module.exports.DialogBot = DialogBot;
+module.exports.MainBot = MainBot;
